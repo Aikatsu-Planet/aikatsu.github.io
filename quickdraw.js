@@ -196,6 +196,8 @@ function drawPenDown(x, y) {
 
     if (pen.isEraser) {
         context.globalCompositeOperation = "destination-out";
+    } else {
+        context.globalCompositeOperation = "source-over";
     }
 
     context.beginPath();
@@ -218,6 +220,8 @@ function drawPenMove(x1, y1, x2, y2) {
 
     if (pen.isEraser) {
         context.globalCompositeOperation = "destination-out";
+    } else {
+        context.globalCompositeOperation = "source-over";
     }
 
     context.beginPath();
